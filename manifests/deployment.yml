@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: felixeupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: felixeupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: felixeupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: felixeupipelinesjavascriptdocker 
+          image: kubernetestutorialfdacr.azurecr.io/felixeupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
